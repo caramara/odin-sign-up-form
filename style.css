@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'italianaregular';
+    src: url('italiana-regular-webfont.eot');
+    src: url('italiana-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('italiana-regular-webfont.woff2') format('woff2'),
+         url('italiana-regular-webfont.woff') format('woff'),
+         url('italiana-regular-webfont.ttf') format('truetype'),
+         url('italiana-regular-webfont.svg#italianaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@import "modern-normalize";
+
+:root {
+  line-height: 1.5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+body{
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  padding-inline: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 600px;
+  gap: 20px 20px;
+}
+li {
+    flex: 0 0 45%; /* adjust this value to control the number of columns */
+    margin-bottom: 10px;
+    display: block;
+  }
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  /*display: block;*/
+  max-inline-size: 100%;
+}
+a {
+    color: inherit;
+  }
+  
+
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-image: url(background.jpg);
+    max-width: 400px;
+    height: 100%;
+    padding: 10px 0;
+}
+.logo{
+    width: 100%;
+    margin-top: 200px;
+    background-color: hsl(0, 0%, 0%, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo #odin-logo {
+    max-width: 30%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+.logo #logo-text{
+    font-family: 'italianaregular';
+    font-size: 58px;
+    font-weight: 700;
+}
+#background-credit{
+    text-align: center;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.main-container #headline{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2em;
+    margin-left: 2.5rem;
+}
+.main-container form{
+  width: 100%;
+}
+.main-container fieldset{
+    position:relative;
+    padding: 4rem 2.5rem 2rem 2.5rem;  /* add padding to make room for the legend since absolute positioning removes the element from the page flow*/
+    border: none;
+    background-color: hsl(0, 0%, 97%);
+    box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 14%),
+    0px 3px 5px 3px rgb(0 0 0 / 7%);
+}
+.main-container legend{
+    position: absolute;
+    top:1rem;
+    left: 2.5rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: hsl(343, 10%, 27%);;
+}
+.main-container label{
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+    color: hsl(342, 13%, 45%);;
+}
+.main-container input {
+    width: 100%;
+    border: solid 1px hsl(340, 28%, 90%);
+    border-radius: 5px;
+    height: 1.8rem;
+}
+
+.main-container button, .main-container p{
+    margin: 2.5rem;;
+}
+.main-container button{
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 2px 5px 0 hsl(0, 0%, 0%, 0.3);
+    padding: 1rem 2rem;
+    background-color: hsl(343, 36%, 56%);
+    color: hsl(0, 0%, 100%);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.main-container a{
+    text-decoration: none;
+    font-weight: 700;
+    color:hsl(343, 36%, 56%);
+}
+.main-container input:focus{
+    outline:1px solid hsl(246, 79%, 59%);
+    box-shadow: 1px 2px 5px 0 hsl(0, 0%, 0%, 0.3);
+}
+.main-container input:invalid{
+    outline:1px solid hsl(0, 79%, 59%);
+}
