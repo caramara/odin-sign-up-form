@@ -57,7 +57,9 @@ img {
 a {
     color: inherit;
   }
-  
+  br {
+    margin-bottom: 30px; /* adjust the value to your liking */
+  }
 
 .side-bar{
     display: flex;
@@ -106,6 +108,7 @@ a {
     margin-bottom: 2em;
     margin-left: 2.5rem;
 }
+
 .main-container form{
   width: 100%;
 }
@@ -139,7 +142,7 @@ a {
 }
 
 .main-container button, .main-container p{
-    margin: 2.5rem;;
+    margin: 2.5rem 0 0 2.5rem;
 }
 .main-container button{
     border: none;
@@ -163,4 +166,9 @@ a {
 }
 .main-container input:invalid{
     outline:1px solid hsl(0, 79%, 59%);
+}
+input[type="password"]:invalid + span::after{
+    content: "* Passwords don't match";
+    color: hsl(0, 79%, 59%);
+    font-size: 0.7rem;
 }
